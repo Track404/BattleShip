@@ -5,4 +5,9 @@ export default class Ship {
     this.numberOfHit = 0;
     this.sunk = false;
   }
+
+  hit() {
+    this.numberOfHit += 1;
+    return this.numberOfHit;
+  }
 }
