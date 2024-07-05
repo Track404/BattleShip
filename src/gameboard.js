@@ -1,17 +1,38 @@
+/* eslint-disable consistent-return */
 export default class Gameboard {
   constructor() {
-    this.grid = this.createGrid();
+    this.grid = Array.from({
+      length: 10,
+    }).map(() => Array(10).fill(null));
   }
 
-  createGrid() {
-    for (let i = 0; i < 10; i = +1) {
-      this.grid[i] = [];
+  placeShip(ship, positionX, positionY, axis) {
+    if (axis === 'vertical') {
+      const maxIndex = positionX + ship;
+      if (maxIndex >= 0 && maxIndex < this.grid.length - 1) {
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < ship; i++) {
+          this.grid[positionX + i].splice(positionY, 1, {
+            status: 'O',
+            name: ship.name,
+          });
+        }
 
-      for (let j = 0; i < 10; j = +1) {
-        this.grid[i][j] = null;
+        return true;
       }
+      return false;
     }
 
-    return this.grid;
+    if (axis === 'horizontal') {
+      const maxIndex = positionY + ship;
+      if (maxIndex >= 0 && maxIndex < this.grid[0].length - 1) {
+        // eslint-disable-next-line no-plusplus
+        for (let i = 0; i < ship; i++) {
+          this.grid[positionX].splice(positionY + i, 1, 'O');
+        }
+        return true;
+      }
+      return false;
+    }
   }
 }
