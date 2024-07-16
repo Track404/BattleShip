@@ -46,3 +46,7 @@ body {
   width: 30px;
   margin: 1px;
 }
+
+.pixel:hover {
+  background-color: rgb(187, 187, 187);
+}
