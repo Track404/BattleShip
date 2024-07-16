@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 /* eslint-disable comma-dangle */
 import Ship from './ship';
 
@@ -45,9 +46,10 @@ export default class Gameboard {
         this.grid[positionX][positionY].numberOfHit
       );
       this.allHit -= 1;
+      return true;
     } else this.grid[positionX].splice(positionY, 1, 'Miss');
     if (this.allHit === 0) {
-      return true;
+      return false;
     }
   }
 }
