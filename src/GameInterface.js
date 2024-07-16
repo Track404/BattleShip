@@ -59,6 +59,9 @@ function playerUI() {
         playerGameboard(game);
         playerUI();
       }
+      if (players[0].allHit === 0) {
+        alert('player win the game');
+      }
     });
   });
 }
@@ -88,6 +91,9 @@ function computerUI() {
       if (players[0].grid[row][column].sunkShip === true) {
         computerGameboard(game);
         computerUI();
+      }
+      if (players[0].allHit === 0) {
+        alert('computer win the game');
       }
     });
   });
