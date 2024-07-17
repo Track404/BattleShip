@@ -48,6 +48,36 @@ body {
   margin: 1px;
 }
 
-.pixel:hover {
+.pixel:hover,
+.pixelComputer:hover {
   background-color: rgb(187, 187, 187);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#allInput {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+#allInput > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type='number'] {
+  width: 30px;
+}
+
+select,
+label {
+  height: 21px;
 }

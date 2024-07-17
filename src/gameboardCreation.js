@@ -40,10 +40,11 @@ export function computerGameboard(game) {
 
       div.appendChild(pixel);
       if (game.computer.grid[i][j] instanceof Ship) {
-        pixel.style.backgroundColor = 'blue';
         if (game.computer.grid[i][j].sunkShip === true) {
           pixel.style.backgroundColor = 'yellow';
         }
+      } else if (game.computer.grid[i][j] === 'Miss') {
+        pixel.style.backgroundColor = 'grey';
       }
     }
     computerGrid.appendChild(div);

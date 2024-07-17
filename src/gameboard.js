@@ -14,7 +14,7 @@ export default class Gameboard {
   placeShip(ship, positionX, positionY, axis) {
     if (axis === 'vertical') {
       const maxIndex = positionX + ship.shipLength;
-      if (maxIndex >= 0 && maxIndex < this.grid.length - 1) {
+      if (maxIndex >= 0 && maxIndex < 9) {
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < ship.shipLength; i++) {
           this.grid[positionX + i].splice(positionY, 1, ship);
@@ -27,7 +27,7 @@ export default class Gameboard {
 
     if (axis === 'horizontal') {
       const maxIndex = positionY + ship.shipLength;
-      if (maxIndex >= 0 && maxIndex < this.grid[0].length - 1) {
+      if (maxIndex >= 0 && maxIndex < 9) {
         // eslint-disable-next-line no-plusplus
         for (let i = 0; i < ship.shipLength; i++) {
           this.grid[positionX].splice(positionY + i, 1, ship);
