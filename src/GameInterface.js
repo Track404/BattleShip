@@ -66,7 +66,7 @@ function attackPlayerUI(game) {
   } else {
     PlayerTurn(players, 0, 1);
     pixel.style.backgroundColor = 'grey';
-    messageTurn.innerHTML = '<p>Player Attack<p>';
+    messageTurn.innerHTML = '<p>Computer Attack<p>';
   }
   if (players[0].allHit === 0) {
     alert('computer win the game');
@@ -101,7 +101,7 @@ function attackComputerUI(game) {
         pixel.style.backgroundColor = 'grey';
         PlayerTurn(players, 0, 1);
         attackPlayerUI(game);
-        messageTurn.innerHTML = '<p>Computer Attack<p>';
+        messageTurn.innerHTML = '<p>Player Attack<p>';
       }
 
       if (players[0].allHit === 0) {

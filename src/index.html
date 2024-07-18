@@ -17,9 +17,9 @@
     </div>
     <div class="content">
       <div class="playerGameboard">
-        <h1>Player</h1>
+        <h1 id="PlayerTitle">Player</h1>
         <div id="playerGrid"></div>
-        <button id="createGame">Create Game</button>
+
         <dialog>
           <h1>Place your ship</h1>
           <form action="">
@@ -87,9 +87,12 @@
         </dialog>
       </div>
       <div class="computerGameboard">
-        <h1>Computer</h1>
+        <h1 id="computerTitle">Computer</h1>
         <div id="computerGrid"></div>
+      </div>
+      <div id="contentCreation">
         <div id="messageTurn"></div>
+        <button id="createGame">Create Game</button>
       </div>
     </div>
   </body>

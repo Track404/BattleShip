@@ -1,8 +1,11 @@
 body {
   height: 100vh;
   margin: 0;
-}
+  display: grid;
 
+  grid-template-rows: 100px 1fr;
+}
+/*header styling*/
 #logo {
   width: 80px;
   height: 80px;
@@ -12,8 +15,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   padding-right: 10px;
+}
+.header h1 {
+  border-left: 4px solid rgb(175, 175, 175);
+  border-radius: 2px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #headerLeft {
@@ -21,10 +32,14 @@ body {
   gap: 5px;
 }
 
+/*content styling*/
 .content {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgb(228, 228, 228);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 300px;
+  justify-items: center;
+  gap: 10px;
+  background-color: rgb(241, 241, 241);
 }
 
 .content h1 {
@@ -42,10 +57,11 @@ body {
 
 .pixel,
 .pixelComputer {
-  border: 1px solid black;
-  height: 30px;
-  width: 30px;
-  margin: 1px;
+  background-color: rgb(179, 197, 247);
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+  margin: 1.5px;
 }
 
 .pixel:hover,
@@ -53,10 +69,91 @@ body {
   background-color: rgb(187, 187, 187);
 }
 
+#computerTitle {
+  background-color: rgb(247, 82, 82);
+}
+
+#PlayerTitle {
+  background-color: rgb(83, 83, 250);
+}
+
+#PlayerTitle,
+#computerTitle {
+  width: 430px;
+  color: white;
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  border-radius: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#createGame,
+button {
+  background: #8e8efc;
+  border-radius: 999px;
+  box-shadow: #5e5df0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Inter, Helvetica, 'Apple Color Emoji', 'Segoe UI Emoji',
+    NotoColorEmoji, 'Noto Color Emoji', 'Segoe UI Symbol', 'Android Emoji',
+    EmojiSymbols, -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue',
+    'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+#contentCreation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  grid-column: 1/-1;
+}
+
+#messageTurn {
+  padding: 0;
+  width: 30vw;
+}
+
+/*dialog styling*/
+dialog {
+  background-color: rgb(240, 240, 240);
+  border: none;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+dialog::backdrop {
+  background-color: black;
+  opacity: 0.5;
+}
+dialog button {
+  margin-right: 10px;
+}
 form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #allInput {
@@ -80,4 +177,13 @@ input[type='number'] {
 select,
 label {
   height: 21px;
+}
+
+p {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0;
 }
