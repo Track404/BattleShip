@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BattleShip</title>
+  <script defer src="bundle.js"></script></head>
+  <body>
+    <div class="header">
+      <div id="headerLeft">
+        <img id="logo" src="" alt="BattleShipLogo" />
+        <h1>BattleShip</h1>
+      </div>
+      <div id="headerRight">
+        <h2>Created by Track404</h2>
+      </div>
+    </div>
+    <div class="content">
+      <div class="playerGameboard">
+        <h1 id="PlayerTitle">Player</h1>
+        <div id="playerGrid"></div>
+
+        <dialog>
+          <h1>Place your ship</h1>
+          <form action="">
+            <div id="allInput">
+              <div>
+                <h2>Name</h2>
+                <label for="carrierX">Carrier</label>
+                <label for="battleShipX">BattleShip</label>
+                <label for="cruiserX">Cruiser</label>
+                <label for="submarineX">Submarine</label>
+                <label for="destroyerX">Destroyer</label>
+              </div>
+              <div>
+                <h2>Coordinate</h2>
+                <div>
+                  <input id="carrierX" type="number" value="0" />
+                  <input id="carrierY" type="number" value="1" />
+                </div>
+                <div>
+                  <input id="battleShipX" type="number" value="1" />
+                  <input id="battleShipY" type="number" value="1" />
+                </div>
+                <div>
+                  <input id="cruiserX" type="number" value="2" />
+                  <input id="cruiserY" type="number" value="1" />
+                </div>
+                <div>
+                  <input id="submarineX" type="number" value="3" />
+                  <input id="submarineY" type="number" value="4" />
+                </div>
+                <div>
+                  <input id="destroyerX" type="number" value="7" />
+                  <input id="destroyerY" type="number" value="3" />
+                </div>
+              </div>
+              <div>
+                <h2>Axis</h2>
+                <select id="carrierAxis">
+                  <option value="horizontal">Horizontal</option>
+                  <option value="vertical">Vertical</option>
+                </select>
+                <select id="battleShipAxis">
+                  <option value="horizontal">Horizontal</option>
+                  <option value="vertical">Vertical</option>
+                </select>
+                <select id="cruiserAxis">
+                  <option value="horizontal">Horizontal</option>
+                  <option value="vertical">Vertical</option>
+                </select>
+                <select id="submarineAxis">
+                  <option value="horizontal">Horizontal</option>
+                  <option value="vertical">Vertical</option>
+                </select>
+                <select id="destroyerAxis">
+                  <option value="horizontal">Horizontal</option>
+                  <option value="vertical">Vertical</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <button formmethod="dialog">Cancel</button>
+              <button id="confirmGame">Confirm</button>
+            </div>
+          </form>
+        </dialog>
+      </div>
+      <div class="computerGameboard">
+        <h1 id="computerTitle">Computer</h1>
+        <div id="computerGrid"></div>
+      </div>
+      <div id="contentCreation">
+        <div id="messageTurn"></div>
+        <button id="createGame">Create Game</button>
+      </div>
+    </div>
+  </body>
+</html>
